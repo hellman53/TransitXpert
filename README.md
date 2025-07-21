@@ -2,9 +2,7 @@ Getting Started
 1. Install Dependencies
 Before running the project, make sure you have installed the required Node modules:
 
-bash
-Copy
-Edit
+```bash
 npm install
 # or
 yarn install
@@ -12,9 +10,12 @@ yarn install
 pnpm install
 # or
 bun install
-2. Configure Environment Variables
-Create a .env.local file in the root directory and add your required API keys and environment variables there of Clerk Api, Google Place Api and Stripe Api keys.. For example:
+```
 
+2. Configure Environment Variables
+Create a .env.local file in the root directory and add your required API keys and environment variables there of Clerk Api, Google Place Api and Stripe Api keys.
+For example:
+```bash
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
 CLERK_SECRET_KEY=""
 
@@ -29,14 +30,13 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+```
 ⚠️ Refer to the documentation or team notes for the exact list of required environment variables.
 
 3. Start the Development Server
 Once the dependencies are installed and environment variables are configured, you can run the development server:
 
-bash
-Copy
-Edit
+```bash
 npm run dev
 # or
 yarn dev
@@ -44,6 +44,8 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
 Open http://localhost:3000 in your browser to view the application.
 
 You can start editing the project by modifying app/page.tsx. The page auto-updates as you edit the file.
