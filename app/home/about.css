@@ -1,0 +1,276 @@
+#cursor, #cursor-blur {
+    z-index: 100;
+  }
+  #nav {
+    z-index: 101;
+  }
+
+
+#main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: white;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+ 
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 99;
+ 
+}
+
+
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #c095542f;
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 1;
+}
+#nav{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    
+    gap: 40px;
+    z-index: 98;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    
+}
+#main{
+position: relative;
+background-color: rgba(0, 0, 0, 0.890);
+}
+#page1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    /* flex-wrap: wrap; */
+}
+#page1 h1{
+    font-size: 120px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content: 'Ride. Relax. Arrive.';
+    position: absolute;
+    color: black;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 2px rgb(165, 160, 153);
+    z-index: -1;
+}
+#page1 h3{
+    font-size: 32px;
+    font-weight: 800;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight:400;
+    width: 45%;
+}
+#page2{
+    min-height: 40vh;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+#scroller{
+    margin-bottom: 200px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller h4{
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 120px;
+    font-weight: 1000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all linear 0.4s;
+    color: transparent;
+   
+    -webkit-text-stroke: 2px #ffffff;
+}
+#scroller h4:hover{
+    color: #95C11E;
+    -webkit-text-stroke: 0;
+}
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.about-us{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+    margin-bottom: 70px;
+    
+}
+.about-us img{
+    height: 300px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.about-us-in{
+    width: 70%;
+    text-align: center;
+}
+.about-us-in h2{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.about-us-in p{
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+.cards-container{
+    width: 100%;
+   
+}
+.cards-container img{
+    height: 160px;
+    position: absolute;
+    top: 0px;
+    left: 110px;
+}
+.card{
+    height: 80%;
+    width: 22%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    z-index: 20;
+}
+#card1{
+    background-image: url(https://images.pexels.com/photos/876228/pexels-photo-876228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+#card2{
+    background-image: url(https://images.pexels.com/photos/5835593/pexels-photo-5835593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+#card3{
+    background-image: url(https://images.pexels.com/photos/4606400/pexels-photo-4606400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px;
+    line-height: 35px;
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.overlay h4{
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.overlay p{
+    color: white;
+    font-size: 18px;
+}
+.sign-up{
+    height: 34vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#795003,#e6c50e);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.sign-up img{
+    height: 530px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.sign-up h3{
+    height: 60%;
+    width: auto;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-weight: 800;
+    padding: 50px;
+}
+.active{
+    opacity: 1;
+   visibility: visible;
+   transition:var(--speed) ease;
+ 
+ }
+ .inactive{
+ opacity: 0;
+ visibility: hidden;
+ transition:var(--speed) ease;
+ }
+   
