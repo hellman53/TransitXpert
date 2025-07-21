@@ -13,7 +13,7 @@ bun install
 ```
 
 2. Configure Environment Variables
-Create a .env.local file in the root directory and add your required API keys and environment variables there of Clerk Api, Google Place Api and Stripe Api keys.
+Create a .env.local file in the root directory and add required API keys and environment variables there of Clerk Api, Google Place Api and Stripe Api keys.
 For example:
 ```bash
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
