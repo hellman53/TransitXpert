@@ -59,4 +59,4 @@ Next.js Documentation
 
 Learn Next.js
 
-You can also view the Next.js GitHub repository to contribute or report issues.
+You can also view the Next.js GitHub repository to contribute or report issues 👍.
